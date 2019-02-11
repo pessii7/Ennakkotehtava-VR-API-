@@ -1,7 +1,7 @@
 ## Example run case (Node.js installed):
 Clone this repo to your own directory,
-Run `npm install`,
-Run `npm start`,
+run `npm install`,
+run `npm start`.
 
 --------------------------------------------------------
 
