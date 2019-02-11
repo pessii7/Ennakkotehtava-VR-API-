@@ -1,3 +1,10 @@
+## Example run case (Node.js installed):
+Clone this repo to your own directory
+Run ### `npm install`
+Run ### `npm start`
+
+--------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
