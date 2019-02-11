@@ -1,0 +1,14 @@
+.greenHeadline{
+    width: 100%;
+    height: 40px;
+    margin: 0px;
+    padding:0;
+    background-color: #56a319;
+    box-shadow: 2px 2px 4px #888888b4;
+}
+.headlineText{
+    color: white;
+    margin-left: 35px;
+    top: 50%;
+    padding: 10px;
+}
