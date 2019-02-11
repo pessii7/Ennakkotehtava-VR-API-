@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
 
     render(){
         return( 
-            <div className="ui segment">
+            <div>
                 <form onSubmit={this.onFormSubmit} className="searchForm">
                     <div className="field">
                         <label className="formLabel">Hae aseman nimellä</label>
