@@ -34,11 +34,13 @@ class App extends React.Component {
     // The actual timetable request. 
     // Params: term is word from search bar.
     onSearchSubmit = async (term) =>{
+        term = term.trim();
+        var termCapitalized = term.charAt(0).toUpperCase() + term.slice(1).trim();
         const response = await axios
-        .get("https://rata.digitraffic.fi/api/v1/live-trains/station/"+stationNames[term]+"?minutes_before_departure=240&minutes_after_departure=240&minutes_before_arrival=240&minutes_after_arrival=240");
+        .get("https://rata.digitraffic.fi/api/v1/live-trains/station/"+stationNames[termCapitalized]+"?minutes_before_departure=240&minutes_after_departure=240&minutes_before_arrival=240&minutes_after_arrival=240");
 
         this.setState({trains: response.data});
-        this.setState({currentStation: term});
+        this.setState({currentStation: termCapitalized});
     }
 
     componentDidMount(){

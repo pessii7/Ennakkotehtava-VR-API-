@@ -21,3 +21,18 @@ input[type=text] {
     margin-left: 45px;
     display:block;
 }
+
+.clearButton:after {
+    content: '✖';
+}
+
+.clearButton{
+    background:none;
+    border:none;
+    margin-left: 310px;
+    margin-top: 65px;
+    padding:0;
+    cursor: pointer;
+    position: relative;
+    
+}

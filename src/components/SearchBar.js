@@ -25,6 +25,7 @@ class SearchBar extends React.Component {
                         </input>
                     </div>
                 </form>
+                <button className="clearButton" onClick={(e) => this.setState({term: ""})}></button>
             </div>
         );
     }

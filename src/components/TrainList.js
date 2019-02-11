@@ -69,7 +69,7 @@ const TrainList = (props) => {
     iterateTrains(props.trains, props.currentStation, props.mov);
     data.sort(compare);
     const listItems = data.map((d) => 
-            <tr key={d.number}>
+            <tr>
                 <td>{d.number}</td>
                 <td>{d.startingStation}</td>
                 <td>{d.endingStation}</td>
