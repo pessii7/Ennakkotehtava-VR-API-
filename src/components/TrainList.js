@@ -69,19 +69,23 @@ const TrainList = (props) => {
     iterateTrains(props.trains, props.currentStation, props.mov);
     data.sort(compare);
     const listItems = data.map((d) => 
-            <tr>
-                <td>{d.number}</td>
-                <td>{d.startingStation}</td>
-                <td>{d.endingStation}</td>
-                <td>
-                    <table>
-                        <tbody>
-                            <tr className="estimated">{(d.estimated > d.time ? d.estimated.getHours()+":"+(d.estimated.getMinutes()<10 ? '0':'') + d.estimated.getMinutes() : "")}</tr>
-                            <tr>{(d.cancelled ==="true" ? 'cancelled': d.time.getHours()+":"+(d.time.getMinutes()<10 ? '0':'') + d.time.getMinutes())}</tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
+        <tr>
+            <td>{d.number}</td>
+            <td>{d.startingStation}</td>
+            <td>{d.endingStation}</td>
+            <td>
+                <table>
+                    <tbody>
+                        <tr className="estimated">
+                            {(d.estimated > d.time ? (d.estimated.getHours()<10 ? '0':'') + d.estimated.getHours()+":"+(d.estimated.getMinutes()<10 ? '0':'') + d.estimated.getMinutes() : "")}
+                        </tr>
+                        <tr>
+                            {(d.cancelled === true ? "Cancelled" : (d.time.getHours()<10 ? '0':'') + d.time.getHours()+":"+(d.time.getMinutes()<10 ? '0':'') + d.time.getMinutes())}
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
     );
     return (
         <table className="tableOfContents">

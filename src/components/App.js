@@ -37,7 +37,7 @@ class App extends React.Component {
         term = term.trim();
         var termCapitalized = term.charAt(0).toUpperCase() + term.slice(1).trim();
         const response = await axios
-        .get("https://rata.digitraffic.fi/api/v1/live-trains/station/"+stationNames[termCapitalized]+"?minutes_before_departure=240&minutes_after_departure=240&minutes_before_arrival=240&minutes_after_arrival=240");
+        .get("https://rata.digitraffic.fi/api/v1/live-trains/station/"+stationNames[termCapitalized]+"?minutes_before_departure=420&minutes_after_departure=420&minutes_before_arrival=420&minutes_after_arrival=420");
 
         this.setState({trains: response.data});
         this.setState({currentStation: termCapitalized});
